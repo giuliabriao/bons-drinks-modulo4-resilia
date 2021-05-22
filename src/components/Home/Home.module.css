@@ -1,8 +1,34 @@
+@keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
 .homeContainer{
-    background: url('../../images/home-drinks.jpg') no-repeat 50%;
+    display:flex;
+    justify-content: center;
+    background: url('../../images/home-drinks.jpg') no-repeat;
+    background-size: cover;
     grid-area: content;
 }
 
-.homeImage{
-    width: 80%;
+.articleHome{
+    text-shadow: -6px 4px 6px rgba(0, 0, 0, 0.82);
+    width: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    position: absolute;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.textHome{
+    font-size: 50px;    
+    color: whitesmoke;
+    font-family: 'Girassol', cursive;
 }

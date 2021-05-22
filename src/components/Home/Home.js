@@ -5,9 +5,14 @@ import style from '../../App.css'
 
 function Home() {
     return (
-        <div className={homeStyle.homeContainer}>
-            <Image imageClassName={homeStyle.homeImage} imageSrc=""/>
-        </div>
+        <>
+            <section className={homeStyle.homeContainer}>
+                <article className={homeStyle.articleHome}>
+                    <p className={homeStyle.textHome}>Do it yourself and experience the best drinks you could imagine...</p>
+                </article>
+            </section>
+
+        </>
     )
 }
 
