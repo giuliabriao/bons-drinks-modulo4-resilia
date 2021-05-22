@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home';
 import reset from '../src/reset.css'
+import AboutUs from './components/AboutUs/AboutUs';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/' children={<Home />} />
+          <Route exact path='/aboutus' children={<AboutUs />} />
         </Switch>
         <Footer footerUrl = "https://github.com/giuliabriao"/>
       </BrowserRouter>
