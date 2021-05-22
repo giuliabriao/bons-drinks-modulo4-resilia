@@ -1,0 +1,13 @@
+.headerContainer{
+    grid-area: header;
+    background-color: #593128;
+    box-shadow: 5px 5px 10px rgb(0,0,255 / 42%);
+}
+
+.fontePadrao{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.fonteEspecial{
+    font-family: 'Girassol', cursive;
+}

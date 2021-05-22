@@ -1,0 +1,8 @@
+.homeContainer{
+    background: url('../../images/home-drinks.jpg') no-repeat 50%;
+    grid-area: content;
+}
+
+.homeImage{
+    width: 80%;
+}
