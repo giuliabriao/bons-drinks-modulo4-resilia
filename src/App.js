@@ -6,6 +6,7 @@ import Header from './components/Header/Header'
 import Home from './components/Home/Home';
 import AboutUs from './components/AboutUs/AboutUs';
 import OurTeam from './components/OurTeam/OurTeam';
+import Drinks from './components/Drinks/Drinks'
 
 
 function App() {
@@ -15,10 +16,11 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/' children={<Home />} />
-          <Route exact path='/about-us' children={<AboutUs />} />
-          <Route exact path='/our-team' children={<OurTeam />} />
+          <Route path='/about-us' children={<AboutUs />} />
+          <Route path='/our-team' children={<OurTeam />} />
+          <Route path='/drinks' children={<Drinks />} />
         </Switch>
-        <Footer footerUrl = "https://github.com/giuliabriao"/>
+        <Footer footerUrl="https://github.com/giuliabriao" />
       </BrowserRouter>
     </div>
   );

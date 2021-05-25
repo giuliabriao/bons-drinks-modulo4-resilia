@@ -1,0 +1,50 @@
+.drinksContainer{
+    display: grid;
+    grid-template-areas:
+    "title title title title"
+    "nav nav nav nav"
+    "content content content content";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px auto;
+    width: 80%;
+    justify-self: center;
+}
+
+.drinksTitle{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Girassol', cursive;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+}
+
+
+.drinksNav{
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+    grid-area: nav;
+}
+
+.drinksLink{
+    font-size: 25px;
+    color: whitesmoke;
+    background-color: #8C2703;
+    font-family: 'Barlow Condensed', sans-serif;
+    padding: 10px;
+    margin: 10px;
+    width: 8vw;
+    height: 3vh;
+    border-radius: 3px;
+    justify-self: center;
+}
+
+.drinksLink:hover{
+    background-color: #F28705;
+}
+
+.teste{
+    color: whitesmoke;
+    grid-area: content;
+}

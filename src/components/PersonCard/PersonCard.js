@@ -1,7 +1,9 @@
 import React from 'react'
 import personCardStyle from './PersonCard.module.css'
 
-function PersonCard({ imageSrc, personCardName, personCardText }) {
+function PersonCard(props) {
+
+    const {imageSrc, personCardName, personCardText} = props
 
     // const [appearText, setAppearText] = useState(false)
 
