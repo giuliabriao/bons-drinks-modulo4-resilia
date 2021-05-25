@@ -7,9 +7,9 @@ function Navbar() {
     return (
             <nav className={navbarStyle.navbar}>
                 <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/drinks">Drinks</a>
-                <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/aboutus">About us</a>
+                <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/about-us">About us</a>
                 <a className={`${navbarStyle.headerLink} ${headerStyle.fonteEspecial}`} href="/">Good Drinks</a>
-                <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/ourteam">Our team</a>
+                <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/our-team">Our team</a>
                 <a className={`${navbarStyle.headerLink} ${headerStyle.fontePadrao}`} href="/contact">Contact us</a>
             </nav>
     )

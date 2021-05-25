@@ -1,0 +1,48 @@
+.personCardSection{
+    display: grid;
+    grid-template-areas:
+    "image info";
+    gap: 20px;
+    grid-template-columns: auto 1fr;
+}
+
+.personCardImage{
+    width: 12rem;
+    height: 12rem;
+    align-self: center;
+    object-fit: cover;
+    object-position: 60% 50%;
+    grid-area: image;
+}
+
+.personCardArticle{
+    display: grid;
+    grid-area: info;
+    grid-template-areas:
+    "name"
+    "text";
+    gap: 10px;
+    grid-template-rows: auto 1fr;
+}
+
+.personCardButton{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    grid-area: name;
+}
+
+.personCardName, .personCardText{
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.personCardName{
+    font-weight: 900;
+}
+
+.personCardText{
+    font-size: 20px;
+    grid-area: text;
+}
