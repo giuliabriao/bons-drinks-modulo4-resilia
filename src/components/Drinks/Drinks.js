@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Routes, Switch, Route } from 'react-router-dom'
+import {Switch, NavLink, Route } from 'react-router-dom'
 import PopularDrinks from './PopularDrinks/PopularDrinks'
 import SearchDrinks from './SearchDrinks/SearchDrinks'
 import drinkStyle from './Drinks.module.css'
@@ -9,24 +9,27 @@ function Drinks() {
         <section className={drinkStyle.drinksContainer}>
             <h1 className={drinkStyle.drinksTitle}> Taste the experience...</h1>
 
-            <nav className={drinkStyle.drinksNav}>
-                <a className={drinkStyle.drinksLink} href="/popular-drinks">Popular drinks</a>
-                <a className={drinkStyle.drinksLink} href="/search-drinks">Search drinks</a>
-            </nav>
+            <ul className={drinkStyle.drinksUl}>
+                <li>
+                    <NavLink className={drinkStyle.drinksLink} to="/drinks/popular-drinks" activeClassName={drinkStyle.drinksLinkActive}>Popular drinks</NavLink>
+                </li>
 
-            <p className={drinkStyle.teste}>TESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTE
-            TESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTE
-            TESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTE
-            TESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTETESTE
-            </p>
+                <li>
+                    <NavLink className={drinkStyle.drinksLink} to="/drinks/search-drinks" activeClassName={drinkStyle.drinksLinkActive}>Search drinks</NavLink>
+                </li>
+            </ul>
 
-            <Routes>
-                <Switch>
-                    <Route path="/drinks/popular-drinks" children={<PopularDrinks />} />
-                    <Route path="/drinks/search-drinks" children={<SearchDrinks />} />
-                </Switch>
-            </Routes>
-        </section>
+            <section className={drinkStyle.drinksContent}>
+                    <Switch>
+                        <Route path="/drinks/popular-drinks">
+                            <PopularDrinks />
+                        </Route>
+                        <Route path="/drinks/search-drinks">
+                            <SearchDrinks />
+                        </Route>
+                    </Switch>
+            </section>
+        </section >
     )
 }
 
