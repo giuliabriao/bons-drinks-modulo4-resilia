@@ -57,7 +57,7 @@ function PopularDrinks() {
                     category={selectedDrink.strCategory}
                     glass={selectedDrink.strGlass}
                     iba={selectedDrink.strIBA}
-                    ingredients={`${getMeasures(selectedDrink)}`}
+                    ingredients={`${getMeasures(selectedDrink)} ${getIngredients(selectedDrink)}`}
                     instructions={selectedDrink.strInstructions}
                 />
                 : null

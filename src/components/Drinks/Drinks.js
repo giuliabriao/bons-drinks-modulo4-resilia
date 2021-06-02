@@ -1,8 +1,9 @@
 import React from 'react'
-import {Switch, NavLink, Route } from 'react-router-dom'
+import { Switch, NavLink, Route } from 'react-router-dom'
 import PopularDrinks from './PopularDrinks/PopularDrinks'
 import SearchDrinks from './SearchDrinks/SearchDrinks'
 import drinkStyle from './Drinks.module.css'
+import aboutUsImage from '../../images/about-us-image.jpg'
 
 function Drinks() {
     return (
@@ -20,14 +21,14 @@ function Drinks() {
             </ul>
 
             <section className={drinkStyle.drinksContent}>
-                    <Switch>
-                        <Route path="/drinks/popular-drinks">
-                            <PopularDrinks />
-                        </Route>
-                        <Route path="/drinks/search-drinks">
-                            <SearchDrinks />
-                        </Route>
-                    </Switch>
+                <Switch>
+                    <Route path="/drinks/popular-drinks">
+                        <PopularDrinks />
+                    </Route>
+                    <Route path="/drinks/search-drinks">
+                        <SearchDrinks />
+                    </Route>
+                </Switch>
             </section>
         </section >
     )
