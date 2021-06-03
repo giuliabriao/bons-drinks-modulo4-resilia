@@ -3,7 +3,7 @@ import { Switch, NavLink, Route } from 'react-router-dom'
 import PopularDrinks from './PopularDrinks/PopularDrinks'
 import SearchDrinks from './SearchDrinks/SearchDrinks'
 import drinkStyle from './Drinks.module.css'
-import aboutUsImage from '../../images/about-us-image.jpg'
+import drink from '../../images/page-drinks.jpg'
 
 function Drinks() {
     return (
@@ -20,8 +20,12 @@ function Drinks() {
                 </li>
             </ul>
 
+
             <section className={drinkStyle.drinksContent}>
                 <Switch>
+                    <Route exact path="/drinks">
+                        <img className={drinkStyle.drinksImg} src={drink} />
+                    </Route>
                     <Route path="/drinks/popular-drinks">
                         <PopularDrinks />
                     </Route>

@@ -4,8 +4,9 @@ import { FaSearch } from 'react-icons/fa';
 import useReq from '../../../Hooks/useReq'
 import Modal from '../../Modal/Modal';
 import stylesDrinks from '../PopularDrinks/PopularDrinks.module.css'
+import FilterDrinks from '../FilterDrinks/FilterDrinks';
 
-function SearchDrinks(props) {
+function SearchDrinks() {
 
     const [drinkName, setDrinkName] = useState("")
     const [isModalVisible, setIsModalVisible] = useState(false)
@@ -43,46 +44,48 @@ function SearchDrinks(props) {
 
     const drinks = useReq(url);
 
-    const validate = async () => {
-        if (drinks == null) {
-            await setError("Nada foi encontrado.")
-            console.log("Nada foi encontrado.");
-        }
-    }
-
-    console.log(drinks);
-
     const inputValue = React.useRef(drinkName);
 
     const onButtonClick = () => {
         if (inputValue.current.value == "") {
-            setError("Digite seu drink (:")
+            return setError("Type your drink (:")
         }
-        setDrinkName(inputValue.current.value);
+        if (drinks == null) {
+            setDrinkName(inputValue.current.value)
+            return setError("Nothing was found, try again ):")
+        }else{
+            setError("")
+            return setDrinkName(inputValue.current.value)
+        }
+
     }
 
     return (
         <section className={styles.searchField}>
-            <button onClick={() => onButtonClick()}><FaSearch className={styles.searchIcon} /></button>
+            <button className={styles.searchButton} onClick={() => onButtonClick()}><FaSearch className={styles.searchIcon} /></button>
             <input ref={inputValue} type="text" placeholder="Type a drink..." className={styles.searchInput} />
+            
             <section className={styles.drinksFound}>
                 {
-
-                    error !== "" ? <p>{error}</p>
-
-                        : drinks.map((drink) => {
-                            return (
-                                <section key={drink.idDrink}>
-                                    <p className={stylesDrinks.drinkName}>{drink.strDrink}</p>
-                                    <img onClick={() => {
-                                        handleClick(drink)
-                                        closeModal()
-                                    }} className={stylesDrinks.drinkImg} src={drink.strDrinkThumb} />
-                                </section>
-                            )
-                        })}
+                    error !== ""
+                        ? <p className={styles.error}>{error}</p>
+                        : drinks == null
+                            ? <p className={styles.error}>{error}</p>
+                            : drinks.map((drink) => {
+                                return (
+                                    <section key={drink.idDrink}>
+                                        <p className={stylesDrinks.drinkName}>{drink.strDrink}</p>
+                                        <img onClick={() => {
+                                            handleClick(drink)
+                                            closeModal()
+                                        }} className={stylesDrinks.drinkImg} src={drink.strDrinkThumb} />
+                                    </section>
+                                )
+                            })
+                }
             </section>
 
+            <FilterDrinks/>
 
             {isModalVisible ?
                 <Modal closeModal={closeModal}
@@ -97,7 +100,10 @@ function SearchDrinks(props) {
                 />
                 : null
             }
+
+
         </section>
+
     )
 }
 

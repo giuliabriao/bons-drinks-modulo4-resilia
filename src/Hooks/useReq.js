@@ -19,17 +19,21 @@ const useReq = (url) => {
 
     //função assíncrona para buscar os dados
     const fetchData = async (url) => {
-        console.log("buscando...");
 
         const response = await fetch(url);
 
         const data = await response.json();
 
+
         //retorna o "setando" o estado com os dados
         return setData(data.drinks);
     };
+    // if (data == null) {
+    //     return <p>Deu merda hein</p>
+    // }else{        
+        return data;
+    
 
-    return data;
 };
 
 export default useReq;
