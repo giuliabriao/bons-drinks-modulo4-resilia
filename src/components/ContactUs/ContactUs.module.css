@@ -1,0 +1,20 @@
+.section{
+    grid-area: content;
+    width: 50%;
+}
+
+.title{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Girassol', cursive;
+    justify-self: center;
+    align-self: center;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
