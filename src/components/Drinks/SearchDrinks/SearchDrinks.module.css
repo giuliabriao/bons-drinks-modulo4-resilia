@@ -35,3 +35,15 @@
     margin-top: 3rem;
     justify-content: center;
 }
+
+.filterDiv{
+    display: flex;
+    font-family: 'Barlow Condensed', sans-serif;
+    grid-area: filter;
+}
+
+.filterDiv p {
+    font-size: 30px;
+    margin-right: 1rem;
+    margin-left: 3rem;
+}

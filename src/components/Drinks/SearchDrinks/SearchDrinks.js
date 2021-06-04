@@ -121,7 +121,8 @@ function SearchDrinks() {
         <section className={styles.searchField}>
             <button className={styles.searchButton} onClick={() => onButtonClick()}><FaSearch className={styles.searchIcon} /></button>
             <input ref={inputValue} type="text" placeholder="Type a drink..." className={styles.searchInput} />
-            <div>
+            <div className={styles.filterDiv}>
+                <p>Filter by:</p>
                 <select onChange={pegaCategoria}>
                     <option selected disabled>Selecione</option>
                     <option value="Alcóolico">Alcóolico</option>

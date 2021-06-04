@@ -11,7 +11,7 @@ const tipos = {
     }
 }
 
-const useForm = (tipo) => {
+const useForms = (tipo) => {
     const [value, setValue] = React.useState("");
     const [error, setError] = React.useState(null);
 
@@ -45,3 +45,5 @@ const useForm = (tipo) => {
         onBlur: () => validatingInput(value)
     }
 }
+
+export default useForms
