@@ -1,0 +1,20 @@
+.ourTeamContainer{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "person person"
+    "person person";
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    justify-self: center;
+}
+
+.ourTeamTitle{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Girassol', cursive;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+    margin: 30px;
+}

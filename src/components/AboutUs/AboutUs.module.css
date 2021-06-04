@@ -1,0 +1,37 @@
+.aboutUsSection{
+    display: grid;
+    grid-template-areas: 
+    "title title"
+    "sideA sideB";
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+
+.aboutUsTitle{
+    color: whitesmoke;
+    font-size: 40px;
+    font-family: 'Girassol', cursive;
+    justify-self: center;
+    align-self: center;
+    grid-area: title;
+    margin: 30px;
+}
+
+.aboutUsImage{
+    max-height: 500px;
+    width: 500px;
+    object-fit: cover;
+    grid-area: sideA;
+    object-position: 50% 50%
+}
+
+.aboutUsParagraph{
+    color: whitesmoke;
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 2px;    
+    font-size: 25px;
+    align-self: center;
+    grid-area: sideB;
+}

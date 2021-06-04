@@ -1,0 +1,15 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerLink{
+    font-size: 35px;
+    margin: 10px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.headerLink:hover{
+    color:#F28705;
+}
