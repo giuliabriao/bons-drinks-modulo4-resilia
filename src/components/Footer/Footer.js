@@ -1,5 +1,4 @@
 import React from 'react'
-import style from '../../App.css'
 import footerStyle from './Footer.module.css'
 
 function Footer({footerUrl}) {

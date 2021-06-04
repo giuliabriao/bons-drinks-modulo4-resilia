@@ -1,5 +1,4 @@
 import React from 'react'
-import style from '../../App.css'
 import aboutUsStyle from './AboutUs.module.css'
 import aboutUsImage from '../../images/about-us-image.jpg'
 

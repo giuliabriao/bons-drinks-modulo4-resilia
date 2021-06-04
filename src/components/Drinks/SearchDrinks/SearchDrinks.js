@@ -18,14 +18,13 @@ function SearchDrinks() {
     const [drinks, setDrinks] = useState([]);
 
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
-    
-    const inputValue = React.useRef(drinkName);
+
 
     const handleClick = (drink) => {
         setSelectedDrink(drink)
     }
 
-    const closeModal = () => {
+    const handleModal = () => {
         setIsModalVisible(!isModalVisible)
     }
 
@@ -49,19 +48,18 @@ function SearchDrinks() {
     }
 
     const onButtonClick = async () => {
-        const arrayDrink = await fetchingURL(url);
-        console.log(arrayDrink);
         
-        if (inputValue.current.value == "") {
+        if (drinkName === "") {
             return setError("Type your drink (:")
         }
-        if (arrayDrink == null) {
-            setDrinkName(inputValue.current.value)
+
+        const arrayDrink = await fetchingURL(url);
+
+        if (arrayDrink === null) {
+            setDrinkName(drinkName)
             return setError("Nothing was found, try again ):")
         } else {
-            setError("")
-            setDrinkName(inputValue.current.value)
-            
+            setError("")    
             setData(arrayDrink)
         }
     }
@@ -120,7 +118,7 @@ function SearchDrinks() {
     return (
         <section className={styles.searchField}>
             <button className={styles.searchButton} onClick={() => onButtonClick()}><FaSearch className={styles.searchIcon} /></button>
-            <input ref={inputValue} type="text" placeholder="Type a drink..." className={styles.searchInput} />
+            <input type="text" onBlur={(event) => setDrinkName(event.target.value)} placeholder="Type a drink..." className={styles.searchInput} />
             <div className={styles.filterDiv}>
                 <p>Filter by:</p>
                 <select onChange={pegaCategoria}>
@@ -155,7 +153,7 @@ function SearchDrinks() {
                                         <p className={stylesDrinks.drinkName}>{drink.strDrink}</p>
                                         <img onClick={() => {
                                             handleClick(drink)
-                                            closeModal()
+                                            handleModal()
                                         }} className={stylesDrinks.drinkImg} src={drink.strDrinkThumb} />
                                     </section>
                                 )
@@ -165,7 +163,7 @@ function SearchDrinks() {
             </section>
 
             {isModalVisible ?
-                <Modal closeModal={closeModal}
+                <Modal handleModal={handleModal}
 
                     drinkName={selectedDrink.strDrink}
                     image={selectedDrink.strDrinkThumb}

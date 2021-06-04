@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import style from '../../App.css'
+import '../../App.css'
 import headerStyle from '../Header/Header.module.css'
 import navbarStyle from './Navbar.module.css'
 
