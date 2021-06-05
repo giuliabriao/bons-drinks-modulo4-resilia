@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+# <strong><p style="text-align: center">Good Drinks</p></strong>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This application allows you to search and filter recipes of drinks, so that you can do your own!
+<br>
 
-## Available Scripts
+![app-gif](.github/app-gif.gif)
 
-In the project directory, you can run:
 
-### `npm start`
+### 🔎 <strong>Installing dependencies</strong>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+First things firt, you must clone this repository to your machine, with the following command in Git:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```shell
+git clone https://github.com/giuliabriao/bons-drinks-modulo4-resilia.git
+```
+Now, install the dependencies of the project writting this:
 
-### `npm test`
+```shell
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔎 <strong>How to run</strong>
 
-### `npm run build`
+Write `npm start` in your terminal and it will locally run the application, allowing you to navigate between the pages and checking the funcionalities.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 📌 <strong>About the project</strong>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This application has these minimum requisits:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [x] Use endpoints from a [Drinks API](https://www.thecocktaildb.com/api.php) for searching and filtering;
+- [x] Use the `react-router-dom` library
+- [x] Have the following pages: 
+    - [x] Homepage 
+    - [x] Contact with forms
+    - [x] Our team
+    - [x] About us
+    - [x] Drinks page, showing the 10 most popular ones, their informations through modal and also the possibility to search a drink by name and filtering by some categories.
 
-### `npm run eject`
+This was a month long project built during my fourth and last module at Resilia Educacao, a 6 months bootcamp. Project goals included using technologies learned up until this point and familiarizing myself with documentation for new features.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Originally I wanted to build an application that allowed users to navigate through different endpoints and the most important: search and filter recipes of drinks from an API specific for that purpose. I started this process by using the create-react-app boilerplate, then adding `react-router-dom` and `react-icon` libs.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+One of the main challenges I ran into was learning how to manipulate states, hooks and props from components to components. Not only did the course give me the tools to consume the API and render on screen, it led me to spending several days searching online and asking my friends for help.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+I chose to use the `create-react-app` boilerplate to minimize initial setup and invest more time in diving into the React logic itself. In the next iteration, I plan on showing the infos of filtered drinks in the modal, since the API doesn't provide complete info for filtered drinks.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 🚀 <strong>Technologies</strong>
+The following technologies were used in the projects construction:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [NodeJS](https://nodejs.org/en/)
+- [ReactJS](https://pt-br.reactjs.org/docs/getting-started.html)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)

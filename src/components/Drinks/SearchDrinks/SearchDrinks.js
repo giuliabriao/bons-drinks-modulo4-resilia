@@ -64,11 +64,11 @@ function SearchDrinks() {
         }
     }
 
-    function pegaCategoria(event) {
+    function validateCategory(event) {
 
-        if (event.target.value === 'Alcóolico') {
+        if (event.target.value === 'Alcoholic') {
             setCategoria(['Alcoholic', 'Non_Alcoholic']);
-        } else if (event.target.value === 'Categoria') {
+        } else if (event.target.value === 'Category') {
             setCategoria([
                 'Ordinary Drink',
                 'Cocktail',
@@ -82,7 +82,7 @@ function SearchDrinks() {
                 'Beer',
                 'Soft Drink / Soda',
             ]);
-        } else if (event.target.value === 'Copo') {
+        } else if (event.target.value === 'Glass') {
             setCategoria([
                 'Highball glass',
                 'Cocktail glass',
@@ -121,11 +121,11 @@ function SearchDrinks() {
             <input type="text" onBlur={(event) => setDrinkName(event.target.value)} placeholder="Type a drink..." className={styles.searchInput} />
             <div className={styles.filterDiv}>
                 <p>Filter by:</p>
-                <select onChange={pegaCategoria}>
+                <select onChange={validateCategory}>
                     <option selected disabled>Selecione</option>
-                    <option value="Alcóolico">Alcóolico</option>
-                    <option value="Categoria">Categoria</option>
-                    <option value="Copo">Copo</option>
+                    <option value="Alcoholic">Alcoholic</option>
+                    <option value="Category">Category</option>
+                    <option value="Glass">Glass</option>
                 </select>
 
                 <select onChange={drinkCategoria}>
