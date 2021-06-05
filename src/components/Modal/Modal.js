@@ -4,7 +4,7 @@ import styles from './Modal.module.css'
 function Modal(props) {
 
     const handleOutsideClick = (event) => {
-        if (event.target.id == "modal") {
+        if (event.target.id === "modal") {
             return props.onClose()
         }
     }
@@ -13,7 +13,7 @@ function Modal(props) {
         <div id="modal" className={styles.modal} onClick={() => handleOutsideClick}>
             <section className={styles.container}>
                 <button className={styles.close} onClick={() => props.handleModal()}> X </button>
-                <img className={styles.drinkImg} src={props.image} />
+                <img className={styles.drinkImg} src={props.image} alt="A drink"/>
                 <h1 className={styles.drinkName}>{props.drinkName}</h1>
                 <ul className={styles.infosContainer}>
                     <li><strong style={{ fontWeight: "revert" }}>Category: </strong>{props.category}</li>

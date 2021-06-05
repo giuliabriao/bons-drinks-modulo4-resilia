@@ -24,7 +24,7 @@ function Drinks() {
             <section className={drinkStyle.drinksContent}>
                 <Switch>
                     <Route exact path="/drinks">
-                        <img className={drinkStyle.drinksImg} src={drink} />
+                        <img className={drinkStyle.drinksImg} src={drink} alt="Man holding a glass of a drink, offering to you."/>
                     </Route>
                     <Route path="/drinks/popular-drinks">
                         <PopularDrinks />

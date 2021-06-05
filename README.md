@@ -2,8 +2,10 @@
 
 ## This application allows you to search and filter recipes of drinks, so that you can do your own!
 <br>
+<div style="text-align: center">
 
 ![app-gif](.github/app-gif.gif)
+</div>
 
 
 ### 🔎 <strong>Installing dependencies</strong>

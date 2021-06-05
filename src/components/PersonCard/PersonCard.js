@@ -5,15 +5,9 @@ function PersonCard(props) {
 
     const {imageSrc, personCardName, personCardText} = props
 
-    // const [appearText, setAppearText] = useState(false)
-
-    // const click = ( (event) => {
-
-    // })
-
     return (
         <section className={personCardStyle.personCardSection}>
-            <img className={personCardStyle.personCardImage} src={imageSrc} />
+            <img className={personCardStyle.personCardImage} src={imageSrc} alt="A person from our team"/>
 
             <article className={personCardStyle.personCardArticle}>
                 <button className={personCardStyle.personCardButton}>

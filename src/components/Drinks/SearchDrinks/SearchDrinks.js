@@ -15,7 +15,6 @@ function SearchDrinks() {
     const [error, setError] = useState("");
     const [data, setData] = useState([]);
     const [categoria, setCategoria] = useState([]);
-    const [drinks, setDrinks] = useState([]);
 
     const url = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkName}`
 
@@ -144,7 +143,7 @@ function SearchDrinks() {
                 {
                     error !== ""
                         ? <p className={styles.error}>{error}</p>
-                        : drinks == null
+                        : data == null
                             ? <p className={styles.error}>{error}</p>
                             :
                             data.map((drink) => {
@@ -154,7 +153,7 @@ function SearchDrinks() {
                                         <img onClick={() => {
                                             handleClick(drink)
                                             handleModal()
-                                        }} className={stylesDrinks.drinkImg} src={drink.strDrinkThumb} />
+                                        }} className={stylesDrinks.drinkImg} src={drink.strDrinkThumb} alt="A drink"/>
                                     </section>
                                 )
                             })
