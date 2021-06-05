@@ -44,7 +44,7 @@ function PopularDrinks() {
                         <img onClick={() => {
                             handleClick(drink)
                             handleModal()
-                        }} className={styles.drinkImg} src={drink.strDrinkThumb} />
+                        }} className={styles.drinkImg} src={drink.strDrinkThumb} alt="A drink"/>
                     </section>
                 )
             })}
