@@ -12,7 +12,7 @@ function Modal(props) {
     return (
         <div id="modal" className={styles.modal} onClick={() => handleOutsideClick}>
             <section className={styles.container}>
-                <button className={styles.close} onClick={() => props.closeModal()}> X </button>
+                <button className={styles.close} onClick={() => props.handleModal()}> X </button>
                 <img className={styles.drinkImg} src={props.image} />
                 <h1 className={styles.drinkName}>{props.drinkName}</h1>
                 <ul className={styles.infosContainer}>

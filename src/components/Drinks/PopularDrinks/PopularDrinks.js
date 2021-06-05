@@ -12,7 +12,7 @@ function PopularDrinks() {
         setSelectedDrink(drink)
     }
 
-    const closeModal = () => {
+    const handleModal = () => {
         setIsModalVisible(!isModalVisible)
     }
 
@@ -43,14 +43,14 @@ function PopularDrinks() {
                         <p className={styles.drinkName}>{drink.strDrink}</p>
                         <img onClick={() => {
                             handleClick(drink)
-                            closeModal()
+                            handleModal()
                         }} className={styles.drinkImg} src={drink.strDrinkThumb} />
                     </section>
                 )
             })}
 
             {isModalVisible ?
-                <Modal closeModal={closeModal}
+                <Modal handleModal={handleModal}
 
                     drinkName={selectedDrink.strDrink}
                     image={selectedDrink.strDrinkThumb}
